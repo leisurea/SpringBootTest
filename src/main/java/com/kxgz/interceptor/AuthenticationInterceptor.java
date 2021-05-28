@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 拦截器
+ * Token拦截器
  * 需要注册到MvcConfig配置中才生效
  */
-public class MyInterceptor implements HandlerInterceptor {
+public class AuthenticationInterceptor implements HandlerInterceptor {
 
     /**
      * 执行处理器之前执行

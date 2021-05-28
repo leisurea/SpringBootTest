@@ -1,26 +1,19 @@
 package com.kxgz.config;
 
-import com.kxgz.interceptor.MyInterceptor;
+import com.kxgz.interceptor.AuthenticationInterceptor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.MediaType;
-import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Configuration//标识这是配置类
 public class MvcConfig implements WebMvcConfigurer {
 
     //注册拦截器
     @Bean
-    public MyInterceptor myInterceptor(){
-        return new MyInterceptor();
+    public AuthenticationInterceptor myInterceptor(){
+        return new AuthenticationInterceptor();
     }
 
 

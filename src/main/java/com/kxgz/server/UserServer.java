@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserServer {
 
-    @Autowired
+    @Autowired//如果要允许null值(required=false)
     private  UserMapper userMapper;
     //根据ID查询
     public User queryById(Long id) {

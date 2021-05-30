@@ -17,7 +17,25 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/ssm2
     username: root
     password: 12345678
-
+#  web:
+#    resources:
+#      static-locations: classpath:/static/, classpath:/templates/
+  mvc:
+    view:
+      prefix: /
+      #指的是view视图的后缀，与静态资源index.html这个.html没有关系
+      suffix: .html
+      #默认/** ，修改后所有静态资源签名必须加上/res，减轻拦截器工作
+  servlet:
+    #文件上传配置
+    multipart:
+      #默认单个文件不超过1MB
+      max-file-size: 10MB
+      #默认总上传文件不能超过10MB
+      max-request-size: 100MB
+#    static-path-pattern: /res/**
+#  thymeleaf:
+#    prefix: classpath:/templates/
 #日志级别
 logging:
   level:

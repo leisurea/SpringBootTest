@@ -1,5 +1,7 @@
 package com.kxgz.controller;
 
+import com.kxgz.api.UserLoginToken;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +18,7 @@ public class HelloController {
     @Value("${abc.name}")
     private String name;
 
+    @UserLoginToken
     @GetMapping("hello")
     public String hello(){
         System.out.println("name = " + name);

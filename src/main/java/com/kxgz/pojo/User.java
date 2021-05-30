@@ -12,6 +12,8 @@ public class User {
     private Integer sex;
     private Date birthday;
 
+    private String Token;
+
     public Long getId() {
         return id;
     }
@@ -68,6 +70,14 @@ public class User {
         this.birthday = birthday;
     }
 
+    public String getToken() {
+        return Token;
+    }
+
+    public void setToken(String token) {
+        Token = token;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -78,6 +88,7 @@ public class User {
                 ", age=" + age +
                 ", sex=" + sex +
                 ", birthday=" + birthday +
+                ", Token=" + Token +
                 '}';
     }
 }

@@ -5,7 +5,7 @@ jdbc:
   password: 12345678
 server:
   #默认端口，地址里可以缺省
-  port: 80
+  port: 8080
 
 #激活其他yml文件
 spring:
